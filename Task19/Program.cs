@@ -7,17 +7,39 @@
 // 12821 -> да
 // 23432 -> да
 
+// // Первый вариант решения
+// Console.WriteLine("Введите пятизначное число");
+// string str = Console.ReadLine();
+// int A = str[0];
+// int B = str[1];
+// int C = str[3];
+// int D = str[4];
+// if(A == D && B == C)
+// {
+//     Console.WriteLine("Введенное число является палиндромом");
+// }
+// else
+// {
+//     Console.WriteLine("Введенное число не является палиндромом");
+// }
+
+
+// Второй вариант решения
+
 Console.WriteLine("Введите пятизначное число");
 string str = Console.ReadLine();
-int A = str[0];
-int B = str[1];
-int C = str[3];
-int D = str[4];
-if(A == D && B == C)
+if (str.Length == 5)
 {
-    Console.WriteLine("Введенное число является палиндромом");
+    if (str[0] == str[4] && str[1] == str[3])
+    {
+        Console.WriteLine($"{str} - палиндром");
+    }
+    else
+    {
+        Console.WriteLine($"{str} - НЕ палиндром");
+    }
 }
 else
 {
-    Console.WriteLine("Введенное число не является палиндромом");
+    Console.WriteLine("Ввели не пятизначное число");
 }
